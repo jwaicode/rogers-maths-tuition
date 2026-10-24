@@ -3,20 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roger's Maths Tuition | KS3, GCSE & A-Level</title>
+  <title>Roger's Maths Tuition | KS3, GCSE & A-Level | Ashby-de-la-Zouch</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 </head>
 <body>
 
+  <!-- ===== STICKY NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">📐 Roger's Maths Tuition</div>
+      <a href="#contact" class="btn btn-nav">Book a Free Chat</a>
+    </div>
+  </nav>
+
   <!-- ===== HERO ===== -->
   <header class="hero">
     <div class="hero-inner">
-      <div class="badge">Maths Tuition</div>
-      <h1>Unlock Your Maths<br /><span>Potential</span></h1>
-      <p class="hero-sub">Expert one-to-one tuition for KS3, GCSE and A-Level students<br />in Ashby-de-la-Zouch and online.</p>
-      <a href="#contact" class="btn btn-white">Get in Touch</a>
+      <div class="urgency-pill">⚡ Limited spaces — currently accepting new students</div>
+      <h1>Unlock Your Child's<br /><span>Maths Potential</span></h1>
+      <p class="hero-sub">Expert one-to-one tuition for KS3, GCSE and A-Level students<br />in Ashby-de-la-Zouch — in person or online.</p>
+      <div class="hero-cta-group">
+        <a href="#contact" class="btn btn-white">Book a Free Chat →</a>
+        <span class="hero-cta-note">No commitment · Free first conversation</span>
+      </div>
     </div>
     <div class="hero-formulas" aria-hidden="true">
       <span>a² + b² = c²</span>
@@ -27,6 +38,16 @@
       <span>x = (−b ± √(b²−4ac)) / 2a</span>
     </div>
   </header>
+
+  <!-- ===== TRUST STRIP ===== -->
+  <section class="trust-strip">
+    <div class="container trust-grid">
+      <div class="trust-item">✅ Fully Qualified Teacher (QTS)</div>
+      <div class="trust-item">✅ DBS Checked</div>
+      <div class="trust-item">✅ 20+ Years Experience</div>
+      <div class="trust-item">✅ In-person &amp; Online</div>
+    </div>
+  </section>
 
   <!-- ===== HIGHLIGHTS STRIP ===== -->
   <section class="highlights">
@@ -90,6 +111,36 @@
     </div>
   </section>
 
+  <!-- ===== IS THIS RIGHT FOR YOUR CHILD? ===== -->
+  <section class="audience-section">
+    <div class="container">
+      <p class="section-eyebrow">WHO IS THIS FOR?</p>
+      <h2 class="section-title">Is this right for your child?</h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <div class="audience-icon">😰</div>
+          <h3>Struggling to keep up</h3>
+          <p>Falling behind in class and losing confidence? Regular one-to-one sessions will fill in the gaps and get them back on track.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-icon">📝</div>
+          <h3>Exam preparation</h3>
+          <p>GCSEs or A-Levels coming up? I'll focus on past papers, exam technique, and the topics most likely to come up.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-icon">🚀</div>
+          <h3>Wants to get ahead</h3>
+          <p>Already doing well but aiming for top grades? I can stretch and challenge your child beyond what's covered in school.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-icon">😟</div>
+          <h3>Maths anxiety</h3>
+          <p>Many students feel anxious about Maths. My patient, no-pressure approach helps them build confidence alongside the skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== HOW IT WORKS ===== -->
   <section class="how container" id="how">
     <h2 class="section-title">How It Works</h2>
@@ -110,6 +161,31 @@
         <div class="step-num">3</div>
         <h3>Start Learning</h3>
         <p>We book your first session — in person at my home or online — and the progress begins!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <p class="section-eyebrow">WHAT PARENTS SAY</p>
+      <h2 class="section-title" style="color:#fff;">Results that speak for themselves</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Roger has been absolutely brilliant with our son. He went from a grade 4 to a grade 7 in his mocks — we couldn't be happier."</p>
+          <div class="testimonial-author">— Parent of Year 11 student</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"My daughter was dreading her A-Level Maths but Roger's patient approach completely changed her attitude. She's now actually enjoying it!"</p>
+          <div class="testimonial-author">— Parent of Year 12 student</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"So easy to work with. Sessions are structured but relaxed, and Roger clearly explains things in a way that just clicks. Highly recommend."</p>
+          <div class="testimonial-author">— Parent of Year 9 student</div>
+        </div>
       </div>
     </div>
   </section>
@@ -137,19 +213,72 @@
     </div>
   </section>
 
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section container" id="faq">
+    <p class="section-eyebrow">GOT QUESTIONS?</p>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>How much do sessions cost?</summary>
+        <p>Please get in touch via email and I'll be happy to discuss pricing. Rates are competitive and reflect 20 years of qualified teaching experience. I offer a free initial chat before any commitment.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long is each session?</summary>
+        <p>Sessions are typically one hour, though this can be adjusted to suit your child's needs and concentration levels — especially for younger students.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How often should my child have sessions?</summary>
+        <p>Most students benefit from one session per week, but this can be increased during exam season or when catching up. We'll figure out what works best after our initial chat.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you offer online sessions?</summary>
+        <p>Yes — online sessions are available via video call and are just as effective as in-person. I use a shared whiteboard so it feels natural and interactive.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How quickly will my child see results?</summary>
+        <p>Most students notice an improvement in confidence within the first few sessions. Grade improvements typically show within a few weeks to a couple of months, depending on the starting point and frequency of sessions.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is there a minimum commitment?</summary>
+        <p>No — there's no long-term contract. I believe in earning your trust through results, not locking you in. You're free to stop at any time, though most students stay for many months.</p>
+      </details>
+
+    </div>
+  </section>
+
   <!-- ===== CONTACT ===== -->
   <section class="contact container" id="contact">
-    <h2 class="section-title">Get in Touch</h2>
-    <p class="contact-sub">Ready to find out more? Drop me an email and I'll get back to you as soon as possible.</p>
+    <h2 class="section-title">Book a Free Chat</h2>
+    <p class="contact-sub">No commitment, no pressure. Just a friendly conversation to see if I'm the right fit for your child.</p>
     <a class="btn btn-primary email-btn" href="mailto:rogermathstutor58@gmail.com">
       ✉️ &nbsp;rogermathstutor58@gmail.com
     </a>
+    <p class="contact-note">I typically reply within 24 hours.</p>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <p>© 2026 Roger's Maths Tuition &nbsp;·&nbsp; Ashby-de-la-Zouch &nbsp;·&nbsp; <a href="mailto:rogermathstutor58@gmail.com">rogermathstutor58@gmail.com</a></p>
   </footer>
+
+  <!-- ===== STICKY MOBILE CTA ===== -->
+  <div class="mobile-cta-bar">
+    <a href="mailto:rogermathstutor58@gmail.com" class="btn btn-primary mobile-cta-btn">✉️ Book a Free Chat</a>
+  </div>
+
+  <!-- ===== NAV SCROLL BEHAVIOUR ===== -->
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+    });
+  </script>
 
 </body>
 </html>
