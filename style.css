@@ -158,6 +158,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero-contact {
+  scroll-margin-top: 58px;
   display: grid;
   grid-template-columns: 1fr 250px;
   gap: 14px;
@@ -296,32 +297,6 @@ a { color: inherit; text-decoration: none; }
   color: #fff;
 }
 
-/* ===== HIGHLIGHTS STRIP ===== */
-.highlights {
-  background: #fff;
-  border-bottom: 1px solid #f0f0f0;
-  padding: 48px 24px;
-}
-
-.highlights-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 32px;
-  text-align: center;
-}
-
-.highlight-icon { font-size: 2rem; margin-bottom: 10px; }
-
-.highlight strong {
-  display: block;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #1a1a2e;
-  margin-bottom: 4px;
-}
-
-.highlight span { font-size: 0.88rem; color: #666; }
-
 /* ===== ABOUT ===== */
 .about {
   padding: 80px 24px;
@@ -339,17 +314,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 .about-text p { color: #444; margin-bottom: 14px; font-size: 1.05rem; }
-
-.check-list {
-  list-style: none;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.check-list li::before { content: "✓ "; color: #e8175d; font-weight: 700; }
-.check-list li { font-size: 1rem; color: #333; }
 
 .about-card { min-width: 210px; }
 
@@ -428,6 +392,25 @@ a { color: inherit; text-decoration: none; }
 /* ===== HOW IT WORKS ===== */
 .how { padding: 80px 24px; }
 
+.how-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.how-pills span {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
 .section-title {
   text-align: center;
   font-size: 2rem;
@@ -469,6 +452,25 @@ a { color: inherit; text-decoration: none; }
 
 .step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; color: #1a1a2e; }
 .step p { font-size: 0.92rem; color: #555; line-height: 1.6; }
+
+.step-text-link {
+  display: none;
+  color: #e8175d;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.step-text-link:hover { text-decoration: underline; }
+
+.step-jump {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 28px auto 0;
+  padding: 12px 22px;
+  font-size: 0.95rem;
+  text-align: center;
+}
 .step-arrow { font-size: 2rem; color: #ccc; padding-top: 48px; flex-shrink: 0; }
 
 /* ===== TESTIMONIALS ===== */
@@ -519,24 +521,36 @@ a { color: inherit; text-decoration: none; }
 
 .location-inner {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 60px;
+  grid-template-columns: 1fr minmax(280px, 440px);
+  gap: 40px;
   align-items: center;
 }
 
 .location-text h2 { font-size: 1.9rem; font-weight: 900; margin-bottom: 16px; }
 .location-text p { opacity: 0.92; font-size: 1rem; margin-bottom: 12px; line-height: 1.7; }
 
-.location-icons { display: flex; flex-direction: column; gap: 14px; }
+.location-map {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
 
-.loc-item {
-  background: rgba(255,255,255,0.18);
-  border: 1px solid rgba(255,255,255,0.35);
-  border-radius: 12px;
-  padding: 14px 22px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  white-space: nowrap;
+.location-map iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
+}
+
+.map-open {
+  display: block;
+  text-align: center;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #e8175d;
+  background: #fff;
 }
 
 /* ===== FAQ ===== */
@@ -655,7 +669,8 @@ a { color: inherit; text-decoration: none; }
   .about-card { min-width: unset; }
   .location-inner { grid-template-columns: 1fr; }
   .step-arrow { display: none; }
-  .loc-item { white-space: normal; }
+  .step-text-link { display: inline; }
+  .how-pills span { font-size: 0.82rem; }
   .mobile-cta-bar { display: block; }
   .footer { margin-bottom: 80px; }
   .trust-item { font-size: 0.72rem; }
