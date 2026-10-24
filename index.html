@@ -12,11 +12,19 @@
 
   <!-- ===== TRUST STRIP (top of page) ===== -->
   <div class="trust-strip" id="trust-strip">
-    <div class="trust-grid">
-      <div class="trust-item">✅ Fully Qualified Teacher (QTS)</div>
-      <div class="trust-item">✅ DBS Checked</div>
-      <div class="trust-item">✅ 20+ Years Experience</div>
-      <div class="trust-item">✅ In-person &amp; Online</div>
+    <div class="trust-track">
+      <div class="trust-grid">
+        <div class="trust-item">✅ Fully Qualified Teacher (QTS)</div>
+        <div class="trust-item">✅ DBS Checked</div>
+        <div class="trust-item">✅ 20+ Years Experience</div>
+        <div class="trust-item">✅ In-person &amp; Online</div>
+      </div>
+      <div class="trust-grid trust-grid--clone" aria-hidden="true">
+        <div class="trust-item">✅ Fully Qualified Teacher (QTS)</div>
+        <div class="trust-item">✅ DBS Checked</div>
+        <div class="trust-item">✅ 20+ Years Experience</div>
+        <div class="trust-item">✅ In-person &amp; Online</div>
+      </div>
     </div>
   </div>
 
@@ -41,10 +49,8 @@
       <h1>Unlock Your Child's<br /><span>Maths Potential</span></h1>
       <ul class="hero-ticks">
         <li>Expert 1-1 Tuition</li>
-        <li>Key Stage 3</li>
-        <li>GCSE</li>
-        <li>A-Level</li>
-        <li>5 minute walk from Ashby school</li>
+        <li class="hero-tick-wide">Key Stage 3 &amp; GCSE &amp; A-Level</li>
+        <li>Short walk from Ashby School and Ivanhoe</li>
         <li>20 years of experience</li>
         <li>Exam technique &amp; revision</li>
         <li>Building confidence &amp; understanding</li>
@@ -198,22 +204,43 @@
     <div class="container">
       <p class="section-eyebrow">WHAT PARENTS SAY</p>
       <h2 class="section-title" style="color:#fff;">Results that speak for themselves</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Roger has been absolutely brilliant with our son. He went from a grade 4 to a grade 7 in his mocks — we couldn't be happier."</p>
-          <div class="testimonial-author">— Parent of Year 11 student</div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"My daughter was dreading her A-Level Maths but Roger's patient approach completely changed her attitude. She's now actually enjoying it!"</p>
-          <div class="testimonial-author">— Parent of Year 12 student</div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"So easy to work with. Sessions are structured but relaxed, and Roger clearly explains things in a way that just clicks. Highly recommend."</p>
-          <div class="testimonial-author">— Parent of Year 9 student</div>
-        </div>
+      <div class="notes-masonry">
+        <button type="button" class="note-frame">
+          <img src="images/notes/emma-mouse.jpg" width="664" height="1024" alt="Handwritten thank-you card from Emma, saying she finally passed and learned a lot from Roger's help." loading="lazy" />
+        </button>
+        <button type="button" class="note-frame">
+          <img src="images/notes/elaine-poppies.jpg" width="1024" height="658" alt="Card from Elaine thanking Roger for his help and support, and sharing that Emma passed her maths." loading="lazy" />
+        </button>
+        <button type="button" class="note-frame">
+          <img src="images/notes/harry.jpg" width="881" height="1024" alt="Colourful card from Harry saying thank you for all your help, after two years of A-Level ending in 2026." loading="lazy" />
+        </button>
+        <button type="button" class="note-frame">
+          <img src="images/notes/alfie-whatsapp.jpg" width="1024" height="614" alt="Message from Marie saying Alfie got a grade 7 in higher maths, and thanking Roger for his work." loading="lazy" />
+        </button>
+        <button type="button" class="note-frame">
+          <img src="images/notes/erin-note.jpg" width="725" height="1024" alt="Handwritten note from Erin thanking Roger for maths help and saying she finally passed." loading="lazy" />
+        </button>
+        <button type="button" class="note-frame">
+          <img src="images/notes/hazeeqa.jpg" width="722" height="1024" alt="Thank-you note from Hazeeqa to Mr Western, saying his maths lessons were enjoyable and inspiring." loading="lazy" />
+        </button>
+        <button type="button" class="note-frame">
+          <img src="images/notes/sam.jpg" width="992" height="698" alt="Note from Sam thanking Roger for support over the year and for saving his GCSE, finishing June 2026." loading="lazy" />
+        </button>
+        <button type="button" class="note-frame">
+          <img src="images/notes/alice.jpg" width="820" height="1004" alt="Note from Alice thanking Roger for maths help over two years and saying she has passed." loading="lazy" />
+        </button>
+        <button type="button" class="note-frame">
+          <img src="images/notes/erin-message.jpg" width="1024" height="536" alt="Message thanking Roger for his help and support with Erin, and for building her confidence with numbers." loading="lazy" />
+        </button>
+        <button type="button" class="note-frame">
+          <img src="images/notes/claire-sophie.jpg" width="747" height="1024" alt="Note from Claire and Sophie thanking Roger for maths lessons, and saying Sophie enjoyed seeing his dog." loading="lazy" />
+        </button>
+        <button type="button" class="note-frame">
+          <img src="images/notes/becky.jpg" width="692" height="856" alt="Letter from Mrs Bannister thanking Mr Western for a positive report on Becky, who was on her way to a level 6." loading="lazy" />
+        </button>
+        <button type="button" class="note-frame">
+          <img src="images/notes/home-education.jpg" width="1024" height="1001" alt="Thank-you note for help with home education, saying the lessons were priceless in getting through exams." loading="lazy" />
+        </button>
       </div>
     </div>
   </section>
@@ -295,6 +322,11 @@
     <p class="contact-note">I typically reply within 24 hours.</p>
   </section>
 
+  <dialog class="note-lightbox" id="note-lightbox">
+    <button type="button" class="note-close" id="note-close" aria-label="Close">×</button>
+    <img id="note-lightbox-img" alt="" />
+  </dialog>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <p>© 2026 Roger's Maths Tuition &nbsp;·&nbsp; Ashby-de-la-Zouch &nbsp;·&nbsp; <a href="mailto:rogermathstutor58@gmail.com">rogermathstutor58@gmail.com</a></p>
@@ -343,6 +375,22 @@
         statusEl.textContent = "That didn't send. Please use WhatsApp or email instead.";
       }
     });
+
+    const noteDialog = document.getElementById("note-lightbox");
+    const noteImg = document.getElementById("note-lightbox-img");
+    document.querySelectorAll(".note-frame").forEach((frame) => {
+      frame.addEventListener("click", () => {
+        const img = frame.querySelector("img");
+        noteImg.src = img.src;
+        noteImg.alt = img.alt;
+        noteDialog.showModal();
+      });
+    });
+    document.getElementById("note-close").addEventListener("click", () => noteDialog.close());
+    noteDialog.addEventListener("click", (event) => {
+      if (event.target === noteDialog) noteDialog.close();
+    });
+    noteDialog.addEventListener("close", () => { noteImg.src = ""; });
   </script>
 
 </body>
