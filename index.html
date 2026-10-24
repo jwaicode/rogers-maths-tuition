@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roger's Maths Tuition | KS3, GCSE & A-Level | Ashby-de-la-Zouch</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
@@ -251,9 +252,9 @@
       <div class="location-text">
         <h2>Conveniently Located</h2>
         <p>
-          My home is within easy walking distance of both
+          In-person sessions are on <strong>Hastings Park</strong>, a short walk from both
           <strong>Ashby School</strong> and <strong>Ivanhoe School</strong> in Ashby-de-la-Zouch —
-          perfect for after-school sessions.
+          handy for after-school sessions.
         </p>
         <p>
           Prefer to stay at home? No problem — online sessions are available via video call and
@@ -261,14 +262,13 @@
         </p>
       </div>
       <div class="location-map">
-        <iframe
-          title="Map of the area around Ashby School and Ivanhoe School"
-          src="https://maps.google.com/maps?ll=52.7492,-1.4659&amp;z=16&amp;output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
-        </iframe>
-        <a class="map-open" href="https://www.google.com/maps/@52.7492,-1.4659,16z" target="_blank" rel="noopener">Open in Google Maps</a>
+        <div id="area-map" role="region" aria-label="Map with pins for Hastings Park, Ashby School and Ivanhoe School"></div>
+        <ul class="map-key">
+          <li><span class="map-dot map-dot-home"></span> Hastings Park</li>
+          <li><span class="map-dot map-dot-school"></span> Ashby School</li>
+          <li><span class="map-dot map-dot-school"></span> Ivanhoe School</li>
+        </ul>
+        <a class="map-open" href="https://www.google.com/maps/@52.7483,-1.4640,16z" target="_blank" rel="noopener">Open in Google Maps</a>
       </div>
     </div>
   </section>
@@ -337,6 +337,7 @@
     <a href="#contact" class="btn btn-primary mobile-cta-btn">Book a Free Chat</a>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script>
     const form = document.getElementById("enquiry-form");
     const statusEl = document.getElementById("form-status");
@@ -391,6 +392,29 @@
       if (event.target === noteDialog) noteDialog.close();
     });
     noteDialog.addEventListener("close", () => { noteImg.src = ""; });
+
+    const places = [
+      { name: "Hastings Park", detail: "In-person sessions are on this estate", lat: 52.74534, lng: -1.45888, home: true },
+      { name: "Ashby School", detail: "Nottingham Road", lat: 52.74896, lng: -1.46225, home: false },
+      { name: "Ivanhoe School", detail: "North Street", lat: 52.74998, lng: -1.46848, home: false },
+    ];
+    const areaMap = L.map("area-map", { scrollWheelZoom: false });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(areaMap);
+    places.forEach((place) => {
+      L.circleMarker([place.lat, place.lng], {
+        radius: 11,
+        color: place.home ? "#e8175d" : "#1a1a2e",
+        weight: 2,
+        fillColor: place.home ? "#e8175d" : "#ffffff",
+        fillOpacity: 1,
+      }).addTo(areaMap)
+        .bindTooltip(place.name, { permanent: true, direction: "top", offset: [0, -12], className: "map-label" })
+        .bindPopup("<strong>" + place.name + "</strong><br>" + place.detail);
+    });
+    areaMap.fitBounds(places.map((place) => [place.lat, place.lng]), { padding: [48, 48] });
   </script>
 
 </body>
