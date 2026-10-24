@@ -6,9 +6,19 @@
   <title>Roger's Maths Tuition | KS3, GCSE & A-Level | Ashby-de-la-Zouch</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- ===== TRUST STRIP (top of page) ===== -->
+  <div class="trust-strip" id="trust-strip">
+    <div class="trust-grid">
+      <div class="trust-item">✅ Fully Qualified Teacher (QTS)</div>
+      <div class="trust-item">✅ DBS Checked</div>
+      <div class="trust-item">✅ 20+ Years Experience</div>
+      <div class="trust-item">✅ In-person &amp; Online</div>
+    </div>
+  </div>
 
   <!-- ===== STICKY NAV ===== -->
   <nav class="nav" id="nav">
@@ -20,34 +30,35 @@
 
   <!-- ===== HERO ===== -->
   <header class="hero">
-    <div class="hero-inner">
-      <div class="urgency-pill">⚡ Limited spaces — currently accepting new students</div>
-      <h1>Unlock Your Child's<br /><span>Maths Potential</span></h1>
-      <p class="hero-sub">Expert one-to-one tuition for KS3, GCSE and A-Level students<br />in Ashby-de-la-Zouch — in person or online.</p>
-      <div class="hero-cta-group">
-        <a href="#contact" class="btn btn-white">Book a Free Chat →</a>
-        <span class="hero-cta-note">No commitment · Free first conversation</span>
+    <div class="container hero-layout">
+
+      <!-- Left: text content -->
+      <div class="hero-inner">
+        <div class="urgency-pill">⚡ Limited spaces — currently accepting new students</div>
+        <h1>Unlock Your Child's<br /><span>Maths Potential</span></h1>
+        <p class="hero-sub">Expert one-to-one tuition for KS3, GCSE and A-Level students in Ashby-de-la-Zouch — in person or online.</p>
+        <div class="hero-cta-group">
+          <a href="#contact" class="btn btn-primary">Book a Free Chat →</a>
+          <span class="hero-cta-note">No commitment · Free first conversation</span>
+        </div>
       </div>
-    </div>
-    <div class="hero-formulas" aria-hidden="true">
-      <span>a² + b² = c²</span>
-      <span>V = πr²h</span>
-      <span>sin(θ) = opp/hyp</span>
-      <span>ax² + bx + c = 0</span>
-      <span>V = ⁴⁄₃πr³</span>
-      <span>x = (−b ± √(b²−4ac)) / 2a</span>
+
+      <!-- Right: chalkboard -->
+      <div class="chalkboard" aria-hidden="true">
+        <div class="chalk chalk-1">a² + b² = c²</div>
+        <div class="chalk chalk-2">sin(θ) = opp/hyp</div>
+        <div class="chalk chalk-3">V = πr²h</div>
+        <div class="chalk chalk-4">ax² + bx + c = 0</div>
+        <div class="chalk chalk-5">x = −b ± √(b²−4ac)</div>
+        <div class="chalk chalk-6 chalk-small">──────────────</div>
+        <div class="chalk chalk-7 chalk-small">2a</div>
+        <div class="chalk chalk-8">∫ f(x) dx</div>
+        <div class="chalk chalk-9">dy/dx</div>
+        <div class="chalk-triangle"></div>
+      </div>
+
     </div>
   </header>
-
-  <!-- ===== TRUST STRIP ===== -->
-  <section class="trust-strip">
-    <div class="container trust-grid">
-      <div class="trust-item">✅ Fully Qualified Teacher (QTS)</div>
-      <div class="trust-item">✅ DBS Checked</div>
-      <div class="trust-item">✅ 20+ Years Experience</div>
-      <div class="trust-item">✅ In-person &amp; Online</div>
-    </div>
-  </section>
 
   <!-- ===== HIGHLIGHTS STRIP ===== -->
   <section class="highlights">
@@ -276,7 +287,7 @@
   <script>
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+      nav.classList.toggle('nav--scrolled', window.scrollY > 20);
     });
   </script>
 
